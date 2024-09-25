@@ -2,8 +2,8 @@ const TelegramBot = require("node-telegram-bot-api");
 const XLSX = require("xlsx");
 const fs = require("fs");
 
-// Telegram Bot Token
-const token = "7410579608:AAE3ep6OvK1ydL2GHbULs5NZzzaYlRlcMCw";
+// Telegram Bot Token from env file
+const token = process.env.TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 
 function getResultFromExcel(code) {
